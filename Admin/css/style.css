@@ -1,0 +1,15 @@
+.card li a{
+    color:white !important;
+    text-decoration: none;
+}
+.card li a:hover{
+    color:rgb(4, 4, 29) !important;
+    text-decoration: none;
+}
+/*.footer-admin {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}*/
