@@ -23,13 +23,7 @@ while ($row = mysqli_fetch_array($sql)) {
                     <div style="margin-bottom: 32px;">
                         <span style="font-weight: bold; font-size: 18px; ">MÔ TẢ SẢN PHẨM</span>
                         <div style="margin-top: 5px;">
-                        <p style="margin-bottom: 0px">CPU: Intel Core i7-10750H (2.60GHz upto 5.00GHz, 12MB) 6 Nhân 12 Luồng</p>
-                        <p style="margin-bottom: 0px">RAM: 8GB (2x4GB) DDR4 2666Mhz (Miễn phí nâng cấp Ram 16GB)</p>
-                        <p style="margin-bottom: 0px">SSD: SSD 512GB M.2 PCIe NVMe (+1 Slot M.2 PCIe)</p>
-                        <p style="margin-bottom: 0px">VGA: NVIDIA GeForce RTX 2060 6GB GDDR6</p>
-                        <p style="margin-bottom: 0px">LCD: 15.6" Full HD (1920*1080) 120Hz WVA Anti-Glare LED Backlit</p>
-                        <p style="margin-bottom: 0px">PIN: 4 Cells 68 Whr</p>
-                        <p style="margin-bottom: 0px">OS: Windows 10 Bản Quyền</p>
+                            <?php echo $row['chitiet'] ?>
                         </div>
                     </div>
                     <?php
