@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 if (isset($_SESSION['tendnadmin'])) {
     
@@ -161,7 +162,7 @@ if (isset($_GET['nc']) && $_GET['nc'] == 'thoat') {
         </div>
     </div>
     <div class="container-fluid p-0 mt-3 footer-admin">
-        <div class="col-12 text-center text-white bg-dark py-3">
+        <div style="position: fixed; bottom: 0;" class="col-12 text-center text-white bg-dark py-3">
             <h5>&copy; Website Bán Linh Kiện Máy Tính</h5>
         </div>
     </div>

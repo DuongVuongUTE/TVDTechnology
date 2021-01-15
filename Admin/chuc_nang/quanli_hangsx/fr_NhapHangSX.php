@@ -3,7 +3,7 @@
 ?>
 <div class="row">
     <div class="col-12">
-<form action="fr_NhapHangSX.php" method="POST" enctype="multipart/form-data">
+<form action="" method="POST" enctype="multipart/form-data">
     <h3 class="text-center">CHỨC NĂNG THÊM HÃNG SẢN XUẤT</h3>
     <div class="form-group">
       <label>Tên hãng:</label>

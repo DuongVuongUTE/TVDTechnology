@@ -25,8 +25,12 @@ if ($count > 0) {
                 <input type="text" class="form-control" placeholder="Enter password" name="txt_TenSP" value="<?php echo $nhapsp['TenSP']; ?>">
             </div>
             <div class="form-group">
-                <label>Chi tiết sản phẩm:</label>
+                <label>Mô Tả sản phẩm:</label>
                 <textarea id="editor1" name="txt_diengiai" cols="80" rows="10"><?php echo $nhapsp['DienGiai']; ?></textarea>
+            </div>
+            <div class="form-group">
+                <label>Chi tiết sản phẩm:</label>
+                <textarea id="editor1" name="txt_chitietsp" cols="80" rows="10"><?php echo $nhapsp['chitiet']; ?></textarea>
             </div>
             <div class="form-group">
                 <label>Giá sản phẩm:</label>

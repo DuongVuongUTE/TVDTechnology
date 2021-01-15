@@ -10,8 +10,12 @@ require("../connect/connect.php");
         <input type="text" class="form-control" name="txt_TenSP">
       </div>
       <div class="form-group">
-        <label>Chi tiết sản phẩm:</label>
+        <label>Mô Tả sản phẩm:</label>
         <textarea id="editor1" name="txt_diengiai" cols="80" rows="10"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Chi tiết sản phẩm:</label>
+        <textarea id="editor1" name="txt_chitiet" cols="80" rows="10"></textarea>
       </div>
       <div class="form-group">
         <label>Giá sản phẩm:</label>

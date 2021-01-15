@@ -13,6 +13,8 @@
     <div class="col-md-6 col-12">
         <form action="index.php?nc=chitiet" method="POST" enctype="multipart/form-data">
             <h3 class="text-center" style="margin-top: 17px;">THÔNG TIN HÓA ĐƠN</h3>
+            <p><b>Công Tý Phân Phối: TVD Technology </b></p>
+            <p><b>Trụ Sở: 48 Cao Thắng - Hải Châu Đà Nẵng</b></p>
             <p><b>Mã hóa đơn: </b><?php echo "$mahd"; ?></p>
             <p><b>Tên khách hàng: </b><?php echo $chitiet['HoTen']; ?></p>
             <p><b>Số điện thoại: </b><?php echo $chitiet['SDT']; ?></p>
@@ -25,7 +27,5 @@
         <?php require("ds_cthd.php");?>
     </div>
 </div>
-<div class="row justify-content-center">
-    <button type="submit" class="btn btn-outline-primary w-25 mt-5 text-white" style="margin-left: 323px;"><a href="../viewhoadon.php?nc=inhoadon&mahd=<?php echo $mahd;?>">Xuất hóa đơn</a></button>
-</div> 
+
                     

@@ -16,7 +16,7 @@
             }
 			$Tensp=$_POST['txt_TenSP'];
 			$DienGiai=$_POST['txt_diengiai'];
-			
+			$chitiet=$_POST['txt_chitiet'];
 			$DonGia = $_POST['txt_DonGia'];
 			$anh=$_FILES['txt_HinhDaiDien']['name'];
 			if($anh!=''){
@@ -28,8 +28,8 @@
 			$IDChungLoai = $_POST['txt_IDChungLoai'];
 			$TrangThai = $_POST['txt_trangthai'];
 			$SoLuong = $_POST['txt_SoLuong'];
-			$sql="INSERT INTO tbl_dmsp(MaSP,TenSP,DienGiai,DonGia,HinhAnh,IDLoai,IDHang,TrangThai,SoLuong,SoLuongBan) 
-            VALUES('$masp','$Tensp','$DienGiai','$DonGia','$dich','$IDChungLoai','$IDHSX','$TrangThai','$SoLuong','0')";
+			$sql="INSERT INTO tbl_dmsp(MaSP,TenSP,DienGiai,DonGia,HinhAnh,IDLoai,IDHang,TrangThai,SoLuong,SoLuongBan,chitiet) 
+            VALUES('$masp','$Tensp','$DienGiai','$DonGia','$dich','$IDChungLoai','$IDHSX','$TrangThai','$SoLuong','0','$chitiet')";
             $row = mysqli_query($con,$sql);	
             echo '<script>alert("Đã thêm sản phẩm mới thành công!")</script>';  
             echo '<script>window.location="index.php?nc=nhapsp"</script>';
@@ -60,6 +60,7 @@
            $MaSP_sua=$_POST['txt_MaSP'];
            $Tensp_sua=$_POST['txt_TenSP'];
            $DienGiai_sua=$_POST['txt_diengiai'];
+           $chitiet_update=$_POST['txt_chitietsp'];
            $SoLuong_sua = $_POST['txt_SoLuong'];
            $DonGia_sua = $_POST['txt_DonGia'];
            $anh=$_FILES['txt_HinhAnh']['name'];
@@ -71,9 +72,7 @@
            $IDHSX_sua = $_POST['txt_IDHSX'];
            $IDChungLoai_sua = $_POST['txt_IDChungLoai'];
            $TrangThai_sua = $_POST['txt_trangthai'];
-       $sql_suasp = "UPDATE tbl_dmsp SET MaSP = '$MaSP_sua', TenSP = '$Tensp_sua', DienGiai = '$DienGiai_sua', 
-       DonGia = $DonGia_sua, HinhAnh = '$dich', IDLoai = $IDChungLoai_sua, IDHang = $IDHSX_sua, TrangThai = $TrangThai_sua , 
-       SoLuong = $SoLuong_sua where ID=".$tem_id."";
+       $sql_suasp = "UPDATE tbl_dmsp SET MaSP = '$MaSP_sua', TenSP = '$Tensp_sua', DienGiai = '$DienGiai_sua', DonGia = $DonGia_sua, HinhAnh = '$dich', IDLoai = $IDChungLoai_sua, IDHang = $IDHSX_sua, TrangThai = $TrangThai_sua , SoLuong = $SoLuong_sua where ID=".$tem_id."";
        $row = mysqli_query($con,$sql_suasp);
        if($row>0){
         echo "

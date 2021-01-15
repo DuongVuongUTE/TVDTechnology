@@ -37,12 +37,12 @@ while ($row = mysqli_fetch_array($sql)) {
                 </form>
             </div>
         </div>
-        <div class="row px-5 py-3">
-            <p><?php echo $row['DienGiai'] ?></P>
-        </div>
-    </div>
-    <div class="alert alert-success text-center m-1 mt-3">
+        <div class="alert alert-success text-center m-1 mt-3">
         <strong>SẢN PHẨM TƯƠNG TỰ</strong>
     </div>
     <?php require('sanphamtuongtu.php'); ?>
-<?php } ?>
+        <div class="row px-5 py-3">
+            <p><?php echo $row['DienGiai'] ?></P>
+        </div>
+    </div> <?php
+ } ?>

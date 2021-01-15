@@ -8,7 +8,11 @@
 			$trangThai = $_POST['txt_TrangThai'];
 			
 			$sql="INSERT INTO tbl_hangsx(IDHang,TenHang,Nuoc,TrangThai) VALUES(Null,'$tenHang','$nuoc','$trangThai')";
-			$row = mysqli_query($con,$sql);		
+            $row = mysqli_query($con,$sql);
+            echo "
+            <script language='javascript'>
+                    alert('Thêm Thành Công!');
+            </script>";
 			header("location: index.php?nc=hsx");
 		}else{
 			echo "Bạn phải nhập tên hãng.";
@@ -23,8 +27,8 @@
          $id_item = $_GET["id"];
          $sql = "DELETE from tbl_hangsx where IDHang=".$id_item."";
          $ketqua = mysqli_query($con,$sql);
-         if($ketqua > 0){
-                 echo '<script>window.location="index.php?nc=hsx"</script>';
+         if(mysqli_query($con,$sql)){
+            header("location: index.php?nc=hsx");
          }
      }  
     }
