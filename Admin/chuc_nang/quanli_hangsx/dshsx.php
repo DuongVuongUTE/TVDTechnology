@@ -37,12 +37,12 @@
                                 echo "Không hiển thị";
                             }; ?></td>
                     <td style="vertical-align: middle; text-align: center;">
-                        <a href="index_admin.php?nc=suahsx&id=<?php echo $row['IDHang']; ?>">
+                        <a href="index.php?nc=suahsx&id=<?php echo $row['IDHang']; ?>">
                             <button class="btn btn-primary">Sửa</button>
                         </a>
                     </td>
                     <td style="vertical-align: middle; text-align: center;">
-                        <a onclick="return confirm('Bạn có chắc là muốn xóa hãng sản xuất này không?');" href="index_admin.php?nc=hsx&action=deletehsx&id=<?php echo $row['IDHang'];?>">
+                        <a onclick="return confirm('Bạn có chắc là muốn xóa hãng sản xuất này không?');" href="index.php?nc=xoahsx&id=<?php echo $row['IDHang'];?>">
                             <button class="btn btn-secondary">Xóa</button>
                         </a>
                     </td>

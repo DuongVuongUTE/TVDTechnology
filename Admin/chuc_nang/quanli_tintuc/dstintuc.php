@@ -42,7 +42,7 @@
                     </a>
                 </td>
                 <td style="vertical-align: middle; text-align: center;">
-                    <a onclick="return confirm('Bạn có chắc là muốn xóa tin tức này không?');" href="index.php?nc=tintuc&action=delete&matt=<?php echo $row_qt['MaTT']; ?>">
+                    <a onclick="return confirm('Bạn có chắc là muốn xóa tin tức này không?');" href="index.php?nc=xoatt&id=<?php echo $row_qt['MaTT']; ?>">
                         <button class="btn btn-secondary">Xóa</button>
                     </a>
                     <?php require('xulynhaptintuc.php'); ?>

@@ -21,11 +21,13 @@ if (isset($_POST['btn_addtt'])) {
     values (null, '$ngaynhap', '$new_path', '$tieude', '$noidung', '$trangthai')";
 //    header("location:?nc=tintuc");
     if (mysqli_query($con, $sql_insert_tt)) {
-        $message = "Thêm Thành Công";
-        echo "<script type='text/javascript'>alert('$message');</script>";
+        echo "
+        <script language='javascript'>alert('Thêm Thành Công'); 
+        window.open('index.php?nc=tintuc','_self',3);</script>";
+
     } else {
-        $message = "Thêm Không Thành Công";
-        echo "<script type='text/javascript'>alert('$message');</script>";
+        echo "
+        <script language='javascript'>alert('Thêm Thất Bại'); </script>";
     }
 }
 
@@ -46,22 +48,23 @@ if (isset($_POST['btn_updatett'])) {
     if (isset($new_path)) {
         $sql_update_tt = "update tbl_tintuc set NgayNhap = '$ngaynhap', AnhTinTuc = '$new_path',  TieuDe = '$tieude', NoiDungTT = '$noidung', TrangThai = '$trangthai' where MaTT='$matt_update'";
         mysqli_query($con, $sql_update_tt);
-        $message = "Cập nhập thành công";
-        echo "<script type='text/javascript'>alert('$message');</script>";
+        echo "
+        <script language='javascript'>alert('Cập Nhật Thành Công'); 
+        window.open('index.php?nc=tintuc','_self',3);</script>";
     } else {
-        $message = "Cập nhập không thành công";
+        $message = "Cập Nhật Thất Bại";
         echo "<script type='text/javascript'>alert('$message');</script>";
     }
 }
 
 // xóa tin tức
-if (isset($_GET["action"]) && $_GET["action"] == "delete") {
-        $id_item = $_GET["matt"];
-        $sql = "DELETE from tbl_tintuc where MaTT=". $id_item ."";
-        $ketqua = mysqli_query($con, $sql);
-        if ($ketqua >0) {
-            $message = "Xóa Thành Công";
-            echo "<script type='text/javascript'>alert('$message');</script>";
-        }
-    }
+//if (isset($_GET["action"]) && $_GET["action"] == "delete") {
+//        $id_item = $_GET["matt"];
+//        $sql = "DELETE from tbl_tintuc where MaTT=". $id_item ."";
+//        $ketqua = mysqli_query($con, $sql);
+//        if ($ketqua >0) {
+//            $message = "Xóa Thành Công";
+//            echo "<script type='text/javascript'>alert('$message');</script>";
+//        }
+//    }
 ?>

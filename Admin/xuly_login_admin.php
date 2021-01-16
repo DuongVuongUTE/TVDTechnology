@@ -17,4 +17,7 @@
 			header("location: login_admin.php");
 		}		
 	}
+	else{
+        echo '<script>alert("Đăng nhập thất bại")</script>';
+    }
 ?>

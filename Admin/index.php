@@ -49,7 +49,7 @@ if (isset($_GET['nc']) && $_GET['nc'] == 'thoat') {
             <div class="dropdown show" style="margin-left: 40px">
                 <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Sản phẩm</a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <a class="dropdown-item" href="index.php?nc=nhapsp">Quản lí sản phẩm</a>
                     <a class="dropdown-item" href="index.php?nc=hsx">Quản lý hãng sản xuất</a>
                 </div>
@@ -111,6 +111,9 @@ if (isset($_GET['nc']) && $_GET['nc'] == 'thoat') {
                     if ($_GET['nc'] == 'suahsx') {
                         require('chuc_nang/quanli_hangsx/fr_SuaHSX.php');
                     }
+                    if ($_GET['nc'] == 'xoahsx') {
+                        require('chuc_nang/quanli_hangsx/fr_Xoahsx.php');
+                    }
                     if ($_GET['nc'] == 'nhapsp') {
                         require('chuc_nang/quanli_sp/dssp.php');
                     }
@@ -125,6 +128,9 @@ if (isset($_GET['nc']) && $_GET['nc'] == 'thoat') {
                     }
                     if ($_GET['nc'] == 'themtt') {
                         require('chuc_nang/quanli_tintuc/fr_TinTuc.php');
+                    }
+                    if ($_GET['nc'] == 'xoatt') {
+                        require('chuc_nang/quanli_tintuc/fr_XoaTinTuc.php');
                     }
                     if ($_GET['nc'] == 'view_suatt') {
                         require('chuc_nang/quanli_tintuc/fr_SuaTinTuc.php');
